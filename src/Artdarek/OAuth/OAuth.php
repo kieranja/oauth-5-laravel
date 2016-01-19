@@ -147,7 +147,7 @@ class OAuth {
         }
 
         // return the service consumer object
-        return $this->_serviceFactory->createService($service, $credentials, $storage, $scope, 'https://sandbox.api.paypal.com');
+        return $this->_serviceFactory->createService($service, $credentials, $storage, $scope, new Uri('https://sandbox.api.paypal.com/v1/'));
 
     }
 }
