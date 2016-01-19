@@ -147,7 +147,7 @@ class OAuth {
         }
 
         // return the service consumer object
-        return $this->_serviceFactory->createService($service, $credentials, $storage, $scope);
+        return $this->_serviceFactory->createService($service, $credentials, $storage, $scope, 'https://sandbox.api.Vpaypal.com');
 
     }
 }
