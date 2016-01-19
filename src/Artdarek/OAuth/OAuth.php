@@ -69,6 +69,7 @@ class OAuth {
      */
     public function setConfig($service)
     {
+		var_dump($service);
         // if config/oauth-4-laravel.php exists use this one
         if (Config::get('oauth-5-laravel.consumers') != null)
         {
@@ -147,7 +148,7 @@ class OAuth {
         }
 
         // return the service consumer object
-        return $this->_serviceFactory->createService($service, $credentials, $storage, $scope, new OAuth\Common\Http\Uri('https://sandbox.api.paypal.com/v1/'));
+        return $this->_serviceFactory->createService($service, $credentials, $storage, $scope);
 
     }
 }
