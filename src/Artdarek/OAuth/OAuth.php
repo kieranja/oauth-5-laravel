@@ -69,11 +69,10 @@ class OAuth {
      */
     public function setConfig($service)
     {
-		var_dump($service);
+
         // if config/oauth-4-laravel.php exists use this one
         if (Config::get('oauth-5-laravel.consumers') != null)
         {
-
             $this->_storage_name  = Config::get('oauth-5-laravel.storage', 'Session');
             $this->_client_id     = Config::get("oauth-5-laravel.consumers.$service.client_id");
             $this->_client_secret = Config::get("oauth-5-laravel.consumers.$service.client_secret");
